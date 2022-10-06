@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import People from './pages/People'
 import Species from './pages/Species'
 import Vehicle from './pages/Vehicles'
+import Planet from './pages/Planet'
 
 
 
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/people' element={<People />} />
         <Route path='/species' element={<Species />} />
         <Route path='/vehicles' element={<Vehicle />} />
+        <Route path='/planets' element={<Planet />} />
       </Routes>
       <Footer />
     </React.StrictMode>
