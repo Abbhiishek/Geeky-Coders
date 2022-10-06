@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import VehicleCard from '../cardsStyles/Vehicles'
 
 function Vehicle() {
 
@@ -31,16 +32,19 @@ function Vehicle() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                         {Vehicles.map((vehicle, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-sm p-4 dark:shadow-slate-200 shadow-slate-700">
-                                <h2 className="text-2xl font-bold dark:text-white" >{vehicle.name}</h2>
-                                <p className='dark:text-white'>Model : {vehicle.model}</p>
-                                <p className='dark:text-white'>Length : {vehicle.length} </p>
-                                <p className='dark:text-white'>Manufactures : {vehicle.manufacturer} </p>
-                                <p className='dark:text-white'>Crew : {vehicle.crew} </p>
-                                <p className='dark:text-white'>Passengers : {vehicle.passengers} </p>
-                                <p className='dark:text-white'>Vehicle Class : {vehicle.vehicle_class} </p>
-                                <p className='dark:text-white'>In {vehicle.vehicle_class.length} Films</p>
-                            </div>
+                            <VehicleCard vehicle={vehicle} index={index} />
+
+                            // moved to VehicleCard
+                            // <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-sm p-4 dark:shadow-slate-200 shadow-slate-700">
+                            //     <h2 className="text-2xl font-bold dark:text-white" >{vehicle.name}</h2>
+                            //     <p className='dark:text-white'>Model : {vehicle.model}</p>
+                            //     <p className='dark:text-white'>Length : {vehicle.length} </p>
+                            //     <p className='dark:text-white'>Manufactures : {vehicle.manufacturer} </p>
+                            //     <p className='dark:text-white'>Crew : {vehicle.crew} </p>
+                            //     <p className='dark:text-white'>Passengers : {vehicle.passengers} </p>
+                            //     <p className='dark:text-white'>Vehicle Class : {vehicle.vehicle_class} </p>
+                            //     <p className='dark:text-white'>In {vehicle.vehicle_class.length} Films</p>
+                            // </div>
                         ))}
 
                     </div>
