@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import SpeciesCard from '../cardsStyles/Species'
 
 function Species() {
 
@@ -30,14 +31,17 @@ function Species() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                         {species.map((specie, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-sm p-4 dark:shadow-slate-200 shadow-slate-700">
-                                <h2 className="text-2xl font-bold dark:text-white" >{specie.name}</h2>
-                                <p className='dark:text-white'>Classification : {specie.classification}</p>
-                                <p className='dark:text-white'>Designation : {specie.designation} </p>
-                                <p className='dark:text-white'>Average Height : {specie.average_height} </p>
-                                <p className='dark:text-white'>Language : {specie.language} </p>
-                                <p className='dark:text-white'>Skin Color : {specie.skin_colors} </p>
-                            </div>
+                            <SpeciesCard specie={specie} index={index} />
+
+                            // moved to SpeciesCard
+                            // <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-sm p-4 dark:shadow-slate-200 shadow-slate-700">
+                            //     <h2 className="text-2xl font-bold dark:text-white" >{specie.name}</h2>
+                            //     <p className='dark:text-white'>Classification : {specie.classification}</p>
+                            //     <p className='dark:text-white'>Designation : {specie.designation} </p>
+                            //     <p className='dark:text-white'>Average Height : {specie.average_height} </p>
+                            //     <p className='dark:text-white'>Language : {specie.language} </p>
+                            //     <p className='dark:text-white'>Skin Color : {specie.skin_colors} </p>
+                            // </div>
                         ))}
 
                     </div>
